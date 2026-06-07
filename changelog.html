@@ -180,6 +180,45 @@
         <div class="content">
             <a href="https://libratech-hub.github.io/ldt-editor-download/" class="back-link">← 返回下载页面</a>
 
+            <!-- v1.1.0 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.1.0</span>
+                    <span class="version-date">2026-06-07</span>
+                </div>
+                <h3 class="version-title">中等版本更新 — 多标签页架构 + 引用系统增强</h3>
+                
+                <p class="change-category">✨ 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>多标签页架构</strong>：打开新表时不再替换当前标签页，改为「已开则切回 / 未开则新增」</li>
+                    <li>切换标签页时自动还原上次选中的行位置</li>
+                    <li>脏 tab（有未保存修改）切走时执行内存级自动保存，切回时恢复修改内容</li>
+                    <li><strong>引用跳转新标签页</strong>：点击引用目标时，若目标表已打开则切回，否则新建标签页并自动定位到目标行</li>
+                    <li><strong>分片表完整支持</strong>：引用系统支持 ITEM_1.ldt、ITEM_2.ldt 等分片表的精确定位与跳转</li>
+                    <li><strong>正向引用图标竞态修复</strong>：使用 SemaphoreSlim 串行化 + RegisterLease 去重</li>
+                    <li><strong>同 rowId 跳过防抖</strong>：相同行的重复引用请求自动跳过</li>
+                    <li><strong>卡片序号徽章</strong>：24×24 圆角深蓝灰序号徽章，直观显示引用数量</li>
+                    <li><strong>描述展开链接</strong>：描述超过 120 字符时显示「▶ 展开」/「▼ 收起」切换链接</li>
+                    <li><strong>键盘导航</strong>：支持 F3 查找下一个引用、Enter 跳转、鼠标点击高亮</li>
+                    <li><strong>软焦点机制</strong>：3 秒软焦点解决焦点判定 bug，支持自动滚动到当前卡片</li>
+                </ul>
+
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li>修复引用跳转后 tab 标签未激活的问题</li>
+                    <li>修复空 tab 永远不加载数据的问题</li>
+                    <li>修复 PendingLocateRow 跨函数传递丢失的问题</li>
+                    <li>修复 ApplyParseResultOnUiThread 不消费定位请求的问题</li>
+                    <li>修复双击引用后引用窗口未自动关闭的问题</li>
+                </ul>
+
+                <p class="change-category">📦 下载说明</p>
+                <ul class="change-list">
+                    <li>Self-Contained 版本（~51MB）：解压即用，无需安装运行时</li>
+                    <li>Framework-Dependent 版本（~2MB）：需安装 .NET 10 Runtime</li>
+                </ul>
+            </div>
+
             <!-- v1.0.1 -->
             <div class="version-block">
                 <div class="version-header">
