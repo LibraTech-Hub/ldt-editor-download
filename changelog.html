@@ -180,6 +180,37 @@
         <div class="content">
             <a href="https://libratech-hub.github.io/ldt-editor-download/" class="back-link">← 返回下载页面</a>
 
+            <!-- v1.2.0 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.2.0</span>
+                    <span class="version-date">2026-06-15</span>
+                </div>
+                <h3 class="version-title">引用窗口全面增强 — 卡片编辑、数量修改、升级/分解/制造查询</h3>
+
+                <p class="change-category">✨ 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>引用窗口不再自动关闭</strong>：跳转到目标表后窗口保持打开，方便连续浏览多个引用</li>
+                    <li><strong>卡片替换引用</strong>：点击替换按钮直接修改主表 ItemID，支持撤销</li>
+                    <li><strong>卡片删除引用</strong>：删除引用的同时自动清零配对 Count 列，避免游戏编译报错</li>
+                    <li><strong>卡片修改数量</strong>：直接修改关联的 Count 列数值，按配对规则自动定位</li>
+                    <li><strong>卡片名称显示数量</strong>：引用卡片标题行显示配对数量（如「好用的鱼饵  X 10」）</li>
+                    <li><strong>添加新引用</strong>：行有空位时显示添加按钮，一键写入新引用并自动设置 Count=1</li>
+                    <li><strong>升级/分解/制造 Tab</strong>：引用窗口新增标签页，扫描物品在 ITEM_UPGRADE / ITEM_BREAKUP / ITEM_CREATE 中的材料关系</li>
+                </ul>
+
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li>修复卡片编辑/删除后引用窗口不刷新的问题（之前需切行或重启窗口才能看到新值）</li>
+                </ul>
+
+                <p class="change-category">📦 下载说明</p>
+                <ul class="change-list">
+                    <li>Self-Contained 版本（~51MB）：解压即用，无需安装运行时</li>
+                    <li>Framework-Dependent 版本（~3MB）：需安装 .NET 10 Runtime</li>
+                </ul>
+            </div>
+
             <!-- v1.1.0 -->
             <div class="version-block">
                 <div class="version-header">
