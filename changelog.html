@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LDT Editor - 版本公告</title>
+    <title>LDT Editor - 更新日志</title>
     <style>
         * {
             margin: 0;
@@ -45,18 +45,6 @@
 
         .content {
             padding: 40px;
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            margin-bottom: 25px;
-            font-size: 0.95rem;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
         }
 
         .version-block {
@@ -121,29 +109,6 @@
             margin-bottom: 8px;
         }
 
-        .download-section {
-            margin-top: 30px;
-            padding-top: 25px;
-            border-top: 1px solid #e0e0e0;
-            text-align: center;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-        }
-
         .footer {
             text-align: center;
             padding: 20px;
@@ -155,6 +120,15 @@
         .footer a {
             color: #667eea;
             text-decoration: none;
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 15px 20px;
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            color: #856404;
         }
 
         @media (max-width: 600px) {
@@ -173,12 +147,57 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📢 LDT Editor 版本公告</h1>
-            <p>彩虹岛 .ldt 数据表编辑器更新日志</p>
+            <h1>🎉 LDT Editor - 更新日志</h1>
+            <p>查看每个版本的新功能、改进和修复</p>
         </div>
 
         <div class="content">
-            <a href="https://libratech-hub.github.io/ldt-editor-download/" class="back-link">← 返回下载页面</a>
+            <!-- v1.2.1 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.2.1</span>
+                    <span class="version-date">2026-06-22</span>
+                </div>
+                
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>数据完整性增强</strong>：大幅提高 .ldt 文件保存后的数据完整性，解决特殊字符可能丢失的问题</li>
+                    <li><strong>多编码支持优化</strong>：完善对韩文（CP949）、简体中文（GBK）等编码的支持，保存成功率从 71% 提升至 100%</li>
+                </ul>
+                
+                <p class="change-category">✨ 改进</p>
+                <ul class="change-list">
+                    <li>优化文件保存逻辑，确保未修改的数据行保持原样</li>
+                    <li>改进特殊字符处理，避免保存时出现乱码或占位符</li>
+                </ul>
+            </div>
+
+            <!-- v1.2.0 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.2.0</span>
+                    <span class="version-date">2026-06-15</span>
+                </div>
+                <h3 class="version-title">引用窗口增强</h3>
+                
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>编辑引用</strong>：可以直接在引用卡片上替换、删除引用，或修改数量</li>
+                    <li>点击「🔄 替换」按钮可更换引用的物品</li>
+                    <li>点击「🗑️ 删除」按钮可删除引用（同时清空数量，避免数据错误）</li>
+                    <li>点击「🔢 修改数量」可调整物品数量</li>
+                    <li><strong>添加引用</strong>：当前行有空位时，可以直接添加新引用（自动设置数量为 1）</li>
+                    <li><strong>数量显示</strong>：引用卡片名称后显示数量，如「好用的鱼饵(1小时) X 10」</li>
+                    <li><strong>配方查看</strong>：新增「升级/分解/制造」标签页，可以查看物品的合成配方和材料需求</li>
+                    <li><strong>保持打开</strong>：跳转到引用目标后，引用窗口保持打开，方便连续查看</li>
+                </ul>
+                
+                <p class="change-category">✨ 改进</p>
+                <ul class="change-list">
+                    <li>引用卡片编辑后立即刷新显示</li>
+                    <li>所有修改支持撤销（Ctrl+Z）</li>
+                </ul>
+            </div>
 
             <!-- v1.2.0 -->
             <div class="version-block">
@@ -217,79 +236,134 @@
                     <span class="version-tag">v1.1.0</span>
                     <span class="version-date">2026-06-07</span>
                 </div>
-                <h3 class="version-title">中等版本更新 — 多标签页架构 + 引用系统增强</h3>
+                <h3 class="version-title">多标签页</h3>
                 
-                <p class="change-category">✨ 新增功能</p>
+                <p class="change-category">🚀 新增功能</p>
                 <ul class="change-list">
-                    <li><strong>多标签页架构</strong>：打开新表时不再替换当前标签页，改为「已开则切回 / 未开则新增」</li>
-                    <li>切换标签页时自动还原上次选中的行位置</li>
-                    <li>脏 tab（有未保存修改）切走时执行内存级自动保存，切回时恢复修改内容</li>
-                    <li><strong>引用跳转新标签页</strong>：点击引用目标时，若目标表已打开则切回，否则新建标签页并自动定位到目标行</li>
-                    <li><strong>分片表完整支持</strong>：引用系统支持 ITEM_1.ldt、ITEM_2.ldt 等分片表的精确定位与跳转</li>
-                    <li><strong>正向引用图标竞态修复</strong>：使用 SemaphoreSlim 串行化 + RegisterLease 去重</li>
-                    <li><strong>同 rowId 跳过防抖</strong>：相同行的重复引用请求自动跳过</li>
-                    <li><strong>卡片序号徽章</strong>：24×24 圆角深蓝灰序号徽章，直观显示引用数量</li>
-                    <li><strong>描述展开链接</strong>：描述超过 120 字符时显示「▶ 展开」/「▼ 收起」切换链接</li>
-                    <li><strong>键盘导航</strong>：支持 F3 查找下一个引用、Enter 跳转、鼠标点击高亮</li>
-                    <li><strong>软焦点机制</strong>：3 秒软焦点解决焦点判定 bug，支持自动滚动到当前卡片</li>
+                    <li><strong>多表同时打开</strong>：可以同时打开多个 .ldt 文件，每个文件显示在独立标签页中</li>
+                    <li><strong>智能切换</strong>：打开已开启的文件时自动切换到对应标签页</li>
+                    <li><strong>自动保存</strong>：切换标签页时自动保存未保存的修改到内存，避免数据丢失</li>
+                    <li><strong>记忆位置</strong>：切换回标签页时自动恢复上次选中的行</li>
                 </ul>
-
+                
+                <p class="change-category">🔗 引用系统增强</p>
+                <ul class="change-list">
+                    <li><strong>新标签页跳转</strong>：点击引用目标时，在新标签页中打开并定位到目标行</li>
+                    <li><strong>分片表支持</strong>：完整支持 <code>ITEM_1.ldt</code>、<code>ITEM_2.ldt</code> 等分片表的跳转</li>
+                    <li><strong>图标显示优化</strong>：修复引用图标加载问题，显示更稳定</li>
+                </ul>
+                
+                <p class="change-category">🎨 引用窗口优化</p>
+                <ul class="change-list">
+                    <li><strong>序号徽章</strong>：显示引用序号，方便识别</li>
+                    <li><strong>描述折叠</strong>：长描述自动折叠，点击「▶ 展开」查看完整内容</li>
+                    <li><strong>键盘导航</strong>：支持 F3 查找下一个引用、Enter 跳转</li>
+                    <li><strong>自动滚动</strong>：自动滚动到当前选中的引用卡片</li>
+                </ul>
+                
                 <p class="change-category">🔧 修复</p>
                 <ul class="change-list">
-                    <li>修复引用跳转后 tab 标签未激活的问题</li>
-                    <li>修复空 tab 永远不加载数据的问题</li>
-                    <li>修复 PendingLocateRow 跨函数传递丢失的问题</li>
-                    <li>修复 ApplyParseResultOnUiThread 不消费定位请求的问题</li>
-                    <li>修复双击引用后引用窗口未自动关闭的问题</li>
-                </ul>
-
-                <p class="change-category">📦 下载说明</p>
-                <ul class="change-list">
-                    <li>Self-Contained 版本（~51MB）：解压即用，无需安装运行时</li>
-                    <li>Framework-Dependent 版本（~2MB）：需安装 .NET 10 Runtime</li>
+                    <li>修复引用跳转后标签页未激活的问题</li>
+                    <li>修复空标签页不加载数据的问题</li>
                 </ul>
             </div>
 
-            <!-- v1.0.1 -->
+            <!-- v1.0.1 (2026-05-30) -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.0.1</span>
+                    <span class="version-date">2026-05-30</span>
+                </div>
+                <h3 class="version-title">CSV 导入/导出</h3>
+                
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>导出 CSV</strong>：可以将表格导出为 CSV 文件（支持导出全部行或仅可见行）</li>
+                    <li><strong>导入 CSV</strong>：可以从 CSV 文件导入数据（支持替换或追加模式）</li>
+                    <li><strong>编码兼容</strong>：自动识别 UTF-8 / GBK / CP949 编码，导出的 CSV 可用 Excel 直接打开</li>
+                </ul>
+                
+                <p class="change-category">✨ 繁体转简体</p>
+                <ul class="change-list">
+                    <li><strong>一键转换</strong>：工具菜单新增「繁体转简体」功能，可以将表格中所有繁体中文转换为简体</li>
+                    <li><strong>安全可靠</strong>：转换前确认，转换后可撤销（Ctrl+Z）</li>
+                </ul>
+                
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li>修复查找栏无法粘贴的问题（Ctrl+V）</li>
+                    <li>修复网格粘贴报错的问题</li>
+                </ul>
+            </div>
+
+            <!-- v1.0.1 (2026-05-27) -->
             <div class="version-block">
                 <div class="version-header">
                     <span class="version-tag">v1.0.1</span>
                     <span class="version-date">2026-05-27</span>
                 </div>
-                <h3 class="version-title">首个正式发布版本</h3>
+                <h3 class="version-title">选图窗增强（Shift+A）</h3>
                 
-                <p class="change-category">✨ 新增功能</p>
+                <p class="change-category">🚀 新增功能</p>
                 <ul class="change-list">
-                    <li>表格编辑：打开、保存、撤销/重做、复制/粘贴</li>
-                    <li>查找与筛选：按关键词筛选，支持正则表达式</li>
-                    <li>批量替换：当前列查找与替换，支持预览</li>
-                    <li>批量填数：按递增或等比规则写入数值</li>
-                    <li>选图窗（Shift+A）：从 SPF 资源浏览图标</li>
-                    <li>物品预览（Shift+P）：实时显示说明与头图</li>
-                    <li>修改记录（Alt+S）：高亮已改单元格，可还原原值</li>
-                    <li>多编码支持：GBK / CP949 / UTF-8 自动择优</li>
-                    <li>文件关联：将 .ldt 默认用本程序打开</li>
-                    <li><strong>繁体转简体</strong>：工具菜单一键将所有繁体中文转换为简体，支持撤销和修改记录</li>
-                    <li>CSV 导入/导出：支持 UTF-8/GBK/CP949 编码，按列名匹配</li>
+                    <li><strong>非模态窗口</strong>：选图窗保持打开，方便连续选择多个图标</li>
+                    <li><strong>批量设置</strong>：选中多行时，双击图标可批量设置所有选中行的图标</li>
+                    <li><strong>图集切换</strong>：支持下拉切换不同的图集序号，鼠标悬停时可用滚轮快速切换</li>
                 </ul>
-
-                <p class="change-category">🔧 修复</p>
+                
+                <p class="change-category">📝 修改记录（Alt+S / Alt+Z）</p>
                 <ul class="change-list">
-                    <li>修复查找栏(Ctrl+V)无法粘贴的问题</li>
-                    <li>修复网格粘贴总是报错的问题</li>
+                    <li><strong>查看修改</strong>：按 Alt+S 高亮显示所有修改过的单元格</li>
+                    <li><strong>查看原值</strong>：鼠标悬停在修改过的单元格上可查看原始值</li>
+                    <li><strong>快速还原</strong>：按 Alt+Z 可还原鼠标悬停的单元格</li>
+                    <li><strong>自动保存记录</strong>：可选择在保存文件时自动保存修改记录</li>
                 </ul>
-
-                <p class="change-category">📦 下载说明</p>
+                
+                <p class="change-category">🔍 功能菜单（Ctrl+F）</p>
                 <ul class="change-list">
-                    <li>Self-Contained 版本（~46MB）：解压即用，无需安装运行时</li>
-                    <li>Framework-Dependent 版本（~2MB）：需安装 .NET 10 Runtime</li>
+                    <li><strong>查找与筛选</strong>：支持全列或当前列查找，可选区分大小写、正则表达式</li>
+                    <li><strong>批量替换</strong>：在当前列进行查找替换，支持预览后再执行</li>
+                    <li><strong>批量填数</strong>：按规则（递增/等比）批量填入数值，支持前缀/后缀、仅可见行</li>
+                    <li><strong>内嵌查找条</strong>：按 Enter 或 F3 快速查找下一处，Ctrl+Enter 应用为行筛选</li>
+                </ul>
+                
+                <p class="change-category">👁️ 物品预览（Shift+P）</p>
+                <ul class="change-list">
+                    <li><strong>实时预览</strong>：根据当前行显示物品说明和图标</li>
+                    <li><strong>快速编辑</strong>：双击状态值、名称、描述可直接编辑并写回表格</li>
+                </ul>
+                
+                <p class="change-category">🌐 编码与多开</p>
+                <ul class="change-list">
+                    <li><strong>自动编码识别</strong>：打开文件时自动识别 GBK、CP949、UTF-8 编码</li>
+                    <li><strong>多开支持</strong>：同时运行多个程序时，非活动窗口自动释放全局热键，避免冲突</li>
+                </ul>
+                
+                <p class="change-category">📖 帮助文档</p>
+                <ul class="change-list">
+                    <li><strong>使用说明</strong>：帮助菜单中可查看完整的使用说明文档</li>
                 </ul>
             </div>
 
-            <div class="download-section">
-                <a href="https://libratech-hub.github.io/ldt-editor-download/" class="download-btn">
-                    ⬇️ 前往下载页面
-                </a>
+            <!-- v1.0.0 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.0.0</span>
+                    <span class="version-date">2026-05-09</span>
+                </div>
+                <h3 class="version-title">首个正式版本</h3>
+                
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>稳定保存</strong>：改进 .ldt 文件保存逻辑，确保数据完整性</li>
+                    <li><strong>安全备份</strong>：保存前自动创建 .bak 备份文件（可在选项中开启）</li>
+                    <li><strong>使用文档</strong>：提供完整的 README 使用说明</li>
+                    <li><strong>MIT 许可</strong>：采用 MIT 开源许可协议</li>
+                </ul>
+            </div>
+
+            <div class="note">
+                <strong>💡 提示</strong>：完整的功能说明请查看「帮助 → 使用说明」或程序目录下的 README.md 文件。
             </div>
         </div>
 
