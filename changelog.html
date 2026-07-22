@@ -152,6 +152,34 @@
         </div>
 
         <div class="content">
+            <!-- v1.2.2 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.2.2</span>
+                    <span class="version-date">2026-07-22</span>
+                </div>
+
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>授权管理</strong>：加入基础版/标准版权限控制，可从帮助菜单导入和管理授权</li>
+                    <li><strong>购买与升级入口</strong>：基础版可直接打开购买页面，授权成功后界面权限状态立即更新</li>
+                </ul>
+
+                <p class="change-category">✨ 改进</p>
+                <ul class="change-list">
+                    <li><strong>图标加载加速</strong>：优先解析 SPF 尾部索引，并复用图集位图缓存，减少重复扫描和 PNG 解码</li>
+                    <li><strong>选图窗响应优化</strong>：同一图集切换行时直接移动选框，避免重复读取 SPF，连续选图更流畅</li>
+                    <li><strong>更新日志体验</strong>：改为在软件内通过 WebView2 展示更新日志</li>
+                </ul>
+
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li>修复虚拟 <code>_RowId</code> 列导致的数据列错位问题</li>
+                    <li>修复部分表格行号识别错误及修改后物品预览未及时刷新的问题</li>
+                    <li>修复授权成功后按钮状态未同步，以及“立即购买”入口无法打开的问题</li>
+                </ul>
+            </div>
+
             <!-- v1.2.1 -->
             <div class="version-block">
                 <div class="version-header">
