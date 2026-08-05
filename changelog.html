@@ -152,6 +152,37 @@
         </div>
 
         <div class="content">
+            <!-- v1.3.0 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.3.0</span>
+                    <span class="version-date">2026-08-04</span>
+                </div>
+                <h3 class="version-title">配方关系工作台、中文显示与 LDT 编码兼容</h3>
+
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>配方关系工作台</strong>：集中查看物品制作、升级和分解关系，材料、结果与需求展示更完整，支持直接定位来源</li>
+                    <li><strong>数据一致性检查</strong>：检查无效引用、ID/数量不匹配、重复主键和异常文字，双击结果即可定位到对应单元格</li>
+                    <li><strong>文件打开增强</strong>：支持将 .ldt 文件拖入主窗口；程序运行时双击多个文件会依次打开到正确的标签页</li>
+                </ul>
+
+                <p class="change-category">✨ 改进</p>
+                <ul class="change-list">
+                    <li><strong>中文界面</strong>：表格字段显示“中文说明 + 原英文名”，状态栏补充当前表用途，原始字段名和数据格式保持不变</li>
+                    <li><strong>中文文本编辑</strong>：按文件识别并保留原始保存编码，可切换简体中文显示；显示编码切换不会改变文件的保存编码</li>
+                    <li><strong>批量操作</strong>：批量替换可限定为当前选中行，降低误改未选中数据的风险</li>
+                    <li><strong>发布包精简</strong>：程序界面、授权公钥和发布所需资源内嵌到程序中，更新包只保留程序、使用说明和许可文件</li>
+                </ul>
+
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li>修复部分中文表格自动解码不稳定、编辑后可能保存为问号的问题，未修改的数据行继续保持原始字节</li>
+                    <li>修复多文件打开请求并发时可能覆盖活动标签页，以及拖放文件被 WebView2 当作下载的问题</li>
+                    <li>修复数据一致性检查结果定位后目标列可能不在视口内的问题，并增加目标单元格高亮</li>
+                </ul>
+            </div>
+
             <!-- v1.2.2 -->
             <div class="version-block">
                 <div class="version-header">
