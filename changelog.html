@@ -152,6 +152,30 @@
         </div>
 
         <div class="content">
+            <!-- v1.4.3 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.4.3</span>
+                    <span class="version-date">2026-08-12</span>
+                </div>
+                <h3 class="version-title">掉落组工作流、历史导航与怪物预览增强</h3>
+
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>MOBLOOT 怪物预览</strong>：显示怪物名称、图标、经验、金币与地区声望等信息，同时保留掉落表字段的直接编辑能力</li>
+                    <li><strong>ITEMSET 掉落组工作流</strong>：浏览、选择和维护物品组；新增操作贴近目标分区，组标题可直接导航到对应数据</li>
+                    <li><strong>分组历史与快速导航</strong>：记录最近访问的掉落组，支持返回历史组，并统一提供全部展开、全部折叠与分组折叠控制</li>
+                    <li><strong>赌博包独立抽屉</strong>：将赌博包奖池放入独立抽屉，减少与常规关系内容混排，并记忆抽屉宽度</li>
+                </ul>
+
+                <p class="change-category">✅ 改进与修复</p>
+                <ul class="change-list">
+                    <li><strong>分组加载提速</strong>：缓存 ITEMSET 分组目录，并在成员变化时增量刷新，减少重复扫描和等待</li>
+                    <li><strong>状态防串页</strong>：切换预览、编辑引用或按 ID 导航时清理过期控件，仅允许最新请求更新界面</li>
+                    <li><strong>操作层级优化</strong>：替换、删除和添加入口集中到组标题，物品卡片继续专注于查看和定位</li>
+                </ul>
+            </div>
+
             <!-- v1.4.2 -->
             <div class="version-block">
                 <div class="version-header">
