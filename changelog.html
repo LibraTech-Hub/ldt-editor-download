@@ -152,6 +152,31 @@
         </div>
 
         <div class="content">
+            <!-- v1.4.4 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.4.4</span>
+                    <span class="version-date">2026-08-15</span>
+                </div>
+                <h3 class="version-title">掉落概率编辑、奖池均分与关系抽屉优化</h3>
+
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>物品掉落概率编辑</strong>：显示外层概率、包内条件概率与最终掉落概率，并可按百分比调整支持写回的概率</li>
+                    <li><strong>赌博奖池概率编辑</strong>：奖励卡片显示实际百分比，单击即可调整目标概率，并支持一键均分整个奖池</li>
+                    <li><strong>统一浮动关系抽屉</strong>：MOBLOOT、物品选择与赌博奖池使用一致的浮动侧栏和拖拽调整方式</li>
+                    <li><strong>分组浏览优化</strong>：补充全部展开、全部折叠与分组折叠控制，各文件标签页独立记忆检视器状态</li>
+                </ul>
+
+                <p class="change-category">✅ 改进与修复</p>
+                <ul class="change-list">
+                    <li><strong>MOBLOOT 刷新与删除</strong>：首次跳转立即刷新正确引用，删除直接掉落时同步清除物品 ID 与对应概率</li>
+                    <li><strong>配方关系可靠性</strong>：恢复“编辑配方”入口，并隐藏包含缺失目标物品的整组无效配方</li>
+                    <li><strong>概率安全写回</strong>：校验活动标签页、来源行、旧值与目标表，写回后刷新并定位实际目标行</li>
+                    <li><strong>概率界面精简</strong>：赌博奖励仅显示实际百分比，单项修改与均分使用原子写回，编辑弹窗更紧凑</li>
+                </ul>
+            </div>
+
             <!-- v1.4.3 -->
             <div class="version-block">
                 <div class="version-header">
