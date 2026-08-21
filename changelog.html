@@ -152,6 +152,30 @@
         </div>
 
         <div class="content">
+            <!-- v1.5.0 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.5.0</span>
+                    <span class="version-date">2026-08-22</span>
+                </div>
+                <h3 class="version-title">SPF 文件树、多表切换与状态续接</h3>
+
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>SPF 文件树</strong>：打开 SPF 容器后在左侧浏览全部可解析 LDT，仅显示 LDT 条目，不再混入图片、音频等资源</li>
+                    <li><strong>容器内多表切换</strong>：同一个 SPF 外层标签内直接切换 LDT，重复名称按稳定入口索引准确定位</li>
+                    <li><strong>每表状态保留</strong>：独立保存各 LDT 的未保存修改、撤销/重做、筛选、编码显示和脏状态</li>
+                    <li><strong>视图位置续接</strong>：切换标签或引用目标后恢复滚动位置、焦点单元格和选中行</li>
+                </ul>
+
+                <p class="change-category">✅ 改进与修复</p>
+                <ul class="change-list">
+                    <li><strong>SPF 引用检索</strong>：关系查询支持容器内存表，引用跳转不再依赖 SPF 文件名推断逻辑表</li>
+                    <li><strong>修改记录安全性</strong>：SPF 条目修改记录按容器与入口独立存储，并校验文件身份和内容哈希</li>
+                    <li><strong>发布安全门控</strong>：Release 继续移除内部写验证命令，并保持三文件 self-contained 发布布局</li>
+                </ul>
+            </div>
+
             <!-- v1.4.4 -->
             <div class="version-block">
                 <div class="version-header">
