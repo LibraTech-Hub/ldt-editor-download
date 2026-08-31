@@ -160,12 +160,20 @@
                 </div>
                 <h3 class="version-title">程序稳定性与操作体验修复</h3>
 
-                <p class="change-category">✅ 改进与修复</p>
+                <p class="change-category">✅ 改进</p>
                 <ul class="change-list">
-                    <li><strong>大表行选择</strong>：拖拽选择触及表格上下左右边缘时自动滚动，单击行号可稳定选择整行，并补充快速定位按钮</li>
+                    <li><strong>大表行选择</strong>：拖拽选择触及表格上下左右边缘时自动滚动，单击行号可稳定选择整行，并补充回到顶部和定位当前选中行的快捷按钮</li>
                     <li><strong>查找状态保持</strong>：快速查找范围、查找与替换选项会自动保存，切换表格或重新启动后无需重复设置</li>
                     <li><strong>SPF/LDT 备份位置</strong>：覆盖保存生成的 `.bak` 默认集中到软件目录下的 `backups` 文件夹，也可在设置中选择其它目录</li>
                     <li><strong>表格切换稳定性</strong>：改善标签页切换和异步刷新时的当前行保持，减少旧行内容短暂残留</li>
+                </ul>
+
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li><strong>行选择多选误触发翻页</strong>：在表格底部附近按住 Ctrl 点击行时，不再因尚未拖动就启动自动滚动，避免多选被误判为拖拽</li>
+                    <li><strong>多行选择状态回退</strong>：拖拽或连续多选后，松开鼠标不再跳回首行；右侧预览与关系面板保持多选结果，并显示最后选中的行</li>
+                    <li><strong>边缘自动滚动后的选区回退</strong>：拖拽选择跨越表格边缘自动滚动后，松开鼠标不会再被延迟点击重置为首行</li>
+                    <li><strong>授权模式状态栏显示</strong>：底部状态栏的「可编辑模式 / 只读模式」现在仅反映授权状态；未打开文件时也会保持正确的授权模式</li>
                 </ul>
             </div>
 
