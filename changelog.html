@@ -152,6 +152,32 @@
         </div>
 
         <div class="content">
+            <!-- v1.5.0.part3 -->
+            <div class="version-block">
+                <div class="version-header">
+                    <span class="version-tag">v1.5.0.part3</span>
+                    <span class="version-date">2026-09-01</span>
+                </div>
+                <h3 class="version-title">文件树中文注释、侧栏宽度调整与自定义中文名</h3>
+
+                <p class="change-category">🚀 新增功能</p>
+                <ul class="change-list">
+                    <li><strong>文件树中文注释</strong>：SPF 文件树中每个 LDT 条目名称后显示中文用途注释（如【物品-消耗品】），中文名紧跟文件名左对齐展示；搜索框同时匹配文件名与中文注释</li>
+                    <li><strong>侧栏宽度可调</strong>：左侧栏右缘支持拖拽调整宽度（240–560px），宽度自动记忆，重启后保持</li>
+                    <li><strong>自定义中文名</strong>：右键底部状态栏的表名即可为该表设置自定义中文名；设置后优先于内置注释显示，并同步到文件树与搜索（仅保存在本机）</li>
+                </ul>
+
+                <p class="change-category">🔧 修复</p>
+                <ul class="change-list">
+                    <li><strong>搜索框残留</strong>：左侧栏从「文件树」切换到「功能」页后，LDT 搜索框现在会正确隐藏，切回文件树时恢复</li>
+                </ul>
+
+                <p class="change-category">🔍 诊断改进</p>
+                <ul class="change-list">
+                    <li><strong>物品模拟器降级可见化</strong>：预览未能加载完整物品卡时，副标题显示「（简化预览）」，悬停可查看具体原因；控制台会输出身份校验的详细差异，便于定位与反馈问题</li>
+                </ul>
+            </div>
+
             <!-- v1.5.0.part2 -->
             <div class="version-block">
                 <div class="version-header">
