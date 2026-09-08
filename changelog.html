@@ -152,6 +152,43 @@
         </div>
 
         <div class="content">
+            <!-- v1.5.1 -->
+            <div class="version-block">
+                <div class="version-header"><span class="version-tag">v1.5.1</span><span class="version-date">2026-09-08</span></div>
+                <h3 class="version-title">套装与装备效果编辑、统一选择器与跨系统关联</h3>
+                <p class="change-category">新增功能</p>
+                <ul class="change-list">
+                    <li><span><strong>套装预览与效果编辑</strong>：新增套装成员、属性与效果预览，支持编辑套装效果并应用草稿；装备预览补充属性中文名称与效果说明。</span></li>
+                    <li><span><strong>统一选择器</strong>：物品、引用与赌博奖池使用统一选择窗口，支持分类筛选与图标预览；掉落组列表可预览组内物品图标。</span></li>
+                    <li><span><strong>引用字段选择补全</strong>：通行证任务支持按条件类型选择怪物、任务或物品；可编辑的通用引用支持替换已有记录并保留数量、概率。装备预览新增所属套装与效果槽位的选择入口。</span></li>
+                    <li><span><strong>通行证奖励与任务关联</strong>：等级页分别展示普通奖励、高级奖励的道具及数量，可进入对应奖励详情替换、增删道具和修改数量；任务页关联指定怪物、任务及购买／兑换物品，区分类别条件并显示目标次数与奖励积分，支持编辑等级和任务条件字段。</span></li>
+                    <li><span><strong>空引用分类保留</strong>：除 ITEM 三张物品表外，每张 LDT 按同表所有行实际出现的折叠栏类别补齐标题；没有内容时显示数量 0、不可展开，并保留分类后的添加入口。ITEM 只显示当前物品实际引用到的关系分类；带编号的掉落组维持逐行显示。没有专用选择器的字段可通过通用选择器从目标表选择记录，填写数量等配套字段后添加。</span></li>
+                    <li><span><strong>跨系统引用页签</strong>：引用面板按成就、手册、活动、战令、商店、拼图等业务分类显示数量并切换查看；补充首批跨表关联，支持正反向查看与定位。</span></li>
+                    <li><span><strong>任务图标补全</strong>：任务引用卡片显示可用的目标图标，完成 NPC 及任务、任务文本、奖励预览可显示关联 NPC 的图标。</span></li>
+                    <li><span><strong>任务引用关系扩展</strong>：支持任务目标（怪物、地图事件、角色与账号标记）、完成 NPC 的双向引用和定位跳转，并关联同任务 ID 的任务、奖励与文本记录；缺失目标会保留提示。</span></li>
+                    <li><span><strong>按住 Ctrl 多选非连续格子与行</strong>：支持按住 Ctrl 点击或框选不连续的多个单元格或多行进行追加/反选选择；非连续单元格可一并复制为保持几何形状的 TSV，或在批量填数/粘贴单值时统一生效</span></li>
+                    <li><span><strong>多层级筛选与撤销/清空</strong>：支持多次筛选条件堆叠，并在查找栏与筛选状态区提供一键撤销顶层筛选与快速清空全部筛选条件</span></li>
+                </ul>
+                <p class="change-category">修复</p>
+                <ul class="change-list">
+                    <li><span><strong>套装草稿续接</strong>：修改同表其他套装后，未应用草稿可继续提交；原套装内容变化或文件重载时保留草稿并提示冲突。</span></li>
+                    <li><span><strong>引用入口与卡片显示</strong>：引用操作统一使用侧栏，移除旧引用窗口入口；精简任务和通行证引用卡片的重复信息。</span></li>
+                    <li><span><strong>套装与装备效果说明</strong>：套装模拟和装备预览会从当前数据目录的 EFFECT 表显示效果名称与说明，不再以“效果 #编号”代替可读内容；带效果的装备会在属性区单独列出装备效果。</span></li>
+                    <li><span><strong>通行证编辑完善</strong>：修复奖励详情替换物品时无法打开选择器的问题；移除等级表“战令奖励与赛季”的添加按钮。任务组显示每日、每周、赛季名称，引用卡的奖励积分改为标题右侧金色粗体，支持点击修改并回填表格。</span></li>
+                    <li><span><strong>引用加载提速</strong>：缩短物品引用查询和大表引用分类加载的等待时间，保留完整关系记录与定位信息。</span></li>
+                    <li><span><strong>物品选择器图标补全</strong>：修复部分图标首次打开时缺失、列表刷新后仍显示占位的问题。</span></li>
+                    <li><span><strong>礼包源入口恢复</strong>：修复 ITEM_3 中礼包物品不显示“礼包源”按钮的问题，恢复奖励池查看与原有操作。</span></li>
+                    <li><span><strong>成就引用添加</strong>：修复添加成就任务、奖励物品时无法打开选择器的问题，支持选择空槽位并填写奖励数量；物品分类添加按当前分类的字段写入。</span></li>
+                    <li><span><strong>物品选择器来源误判</strong>：修复从 SPF 内打开表格后，选择或替换物品时错误提示“选择器来源表已变化”的问题。</span></li>
+                    <li><span><strong>Ctrl滑动选行首行丢失</strong>：修复在行选择模式下按住 Ctrl 拖拽多选行时，松开鼠标会取消首行选中的问题。</span></li>
+                    <li><span><strong>跳选内容以首个选中格为基准原形状粘贴</strong>：复制非连续跳选单元格时，严格记录以首个选中的单元格为基准原点的相对行列偏移；粘贴到目标位置时按该首选格的相对形状精确定位写入，中间跳过的未选单元格保持原样不被覆盖</span></li>
+                </ul>
+                <p class="change-category">发布包</p>
+                <ul class="change-list">
+                    <li><span>版本统一更新为 <code>1.5.1</code>；继续提供 self-contained <code>win-x64</code> 便携包，包含 <code>LdtEditor.exe</code>、<code>README.md</code>、<code>LICENSE</code>，无需另行安装 .NET。</span></li>
+                </ul>
+            </div>
+
             <!-- v1.5.0.part3 -->
             <div class="version-block">
                 <div class="version-header">
