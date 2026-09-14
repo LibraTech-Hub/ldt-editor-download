@@ -152,6 +152,25 @@
         </div>
 
         <div class="content">
+            <!-- v1.5.3 -->
+            <div class="version-block">
+                <div class="version-header"><span class="version-tag">v1.5.3</span><span class="version-date">开发中</span></div>
+                <h3 class="version-title">NPC 关联、商店兑换选择器与引用加载改进</h3>
+                <p class="change-category">新增功能与修复（开发中，尚未发布）</p>
+                <ul class="change-list">
+                    <li><span>兑换明细选择器在候选列表中以小字标注消耗物品名称和数量；加快 MAPEVENT 首次打开引用面板的速度。</span></li>
+                    <li><span>商店与物品兑换的添加选择器不再显示目标物品不存在或物品 ID 为空的明细。</span></li>
+                    <li><span>修复选择器描述中的换行符显示；合并重复的 NPC 商店和完成 NPC 分类，精简完成 NPC 卡片，并在出现位置中显示地图名称、地图编号与坐标。</span></li>
+                    <li><span>NPC 商店与兑换产出的添加选择器显示对应物品名称、明细数量和物品图标，并区分明细 ID 与物品 ID。</span></li>
+                    <li><span>NPC 商店分组引用按 NPCTRADE_LIST 中的对应组名显示，正反向标签同时显示组 ID 与源行 ID。</span></li>
+                    <li><span>NPC 商店明细引用显示对应物品名；商店与兑换明细的悬浮说明同步显示对应物品，点击仍定位到明细行。</span></li>
+                    <li><span>修正 NPC 任务入口为 QUEST_LIST 任务包，并补充任务包到实际任务分表的引用与反向查找。</span></li>
+                    <li><span>引用面板补充 NPC 商店、兑换、任务入口、传送和出现位置关联；区分兑换产出与消耗，缺失目标保留原编号并显示提示。</span></li>
+                    <li><span>NPC_EVENT 的兑换明细引用直接显示产出物品名称和明细数量，点击仍定位到对应明细行。</span></li>
+                    <li><span>引用按当前查询所需表加载，减少首次等待；NPC 分类标题不再提前加载整表关联的全部目标详情。</span></li>
+                </ul>
+            </div>
+
             <!-- v1.5.2P2 -->
             <div class="version-block">
                 <div class="version-header"><span class="version-tag">v1.5.2P2</span><span class="version-date">2026-09-14</span></div>
