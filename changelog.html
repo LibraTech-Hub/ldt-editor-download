@@ -155,15 +155,20 @@
             <!-- v1.5.3 -->
             <div class="version-block">
                 <div class="version-header"><span class="version-tag">v1.5.3</span><span class="version-date">2026-09-15</span></div>
-                <h3 class="version-title">文件保存、列编辑与 NPC 关联改进</h3>
+                <h3 class="version-title">物品模拟器编辑、文件保存与 NPC 关联改进</h3>
                 <p class="change-category">新增功能</p>
                 <ul class="change-list">
+                    <li><span>物品模拟器支持直接编辑名称、佩戴等级和描述，保留描述换行格式；右键可编辑字段可定位并高亮对应表格单元格。</span></li>
+                    <li><span>装备属性与效果支持直接替换、增加和删除，即时回填并支持撤销；新增效果自动使用编号最小的空槽，填满后隐藏新增入口。</span></li>
+                    <li><span>SET 入口和套装面板移至模拟器下方；已有套装的装备可用红色 DEL 按钮移除套装关联。</span></li>
                     <li><span>新增“增加列”，可指定列名与数据类型，支持撤销、重做，以及单 LDT 和 SPF 保存。</span></li>
                     <li><span>块选择模式在选区右下角显示填充柄，双击可选中该列从当前单元格到末行的全部可见单元格。</span></li>
                     <li><span>引用面板补充 NPC 商店、兑换、任务入口、传送和出现位置关联；任务可继续查找到实际任务分表。</span></li>
                 </ul>
                 <p class="change-category">修复与改进</p>
                 <ul class="change-list">
+                    <li><span>属性排布更紧凑，说明文字与图标左对齐；新增按钮统一颜色并跟随软件配色，可定位字段显示右键跳转提示。</span></li>
+                    <li><span>左右面板选中文字时优先复制所选文字，避免被表格选区覆盖；属性修改无需额外确认。</span></li>
                     <li><span>另存为会按当前文件类型保存为 LDT 或整个 SPF；SPF 保存同时包含包内已编辑的表，并保留其他条目。</span></li>
                     <li><span>修复 CSV／表格内容粘贴总是落到第一列的问题，现可从当前选中的行、列或单元格开始粘贴；右键表头可选中整列。</span></li>
                     <li><span>商店、兑换和 NPC 选择器补充物品名称、明细数量与图标，过滤空 ID 或不存在的目标；描述中的换行符能正确显示。</span></li>
