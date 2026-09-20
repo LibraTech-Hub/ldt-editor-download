@@ -155,8 +155,11 @@
             <!-- v1.6.0.Part2 -->
             <div class="version-block">
                 <div class="version-header"><span class="version-tag">v1.6.0.Part2</span><span class="version-date">2026-09-20</span></div>
-                <h3 class="version-title">商城商品新增与价格编辑修复</h3>
+                <h3 class="version-title">ROWID 文件关联与编辑体验修复</h3>
                 <ul class="change-list">
+                    <li><span>新增 <code>.spf</code>（ROWID）Windows 文件关联，可双击打开包含 LDT 数据表的资源包。</span></li>
+                    <li><span>修复 RECALL 的 MOBID 校验目标，改为关联 MOBARRANGE_RECALL 的 RowID，支持双向跳转。</span></li>
+                    <li><span>修复设置页内容被裁切的问题，完整显示输入框与浏览按钮，并支持小窗口滚动。</span></li>
                     <li><span>修复商城新增礼包后可能导致服务器加载报错的问题。</span></li>
                     <li><span>新增礼包和上架单个物品默认开启购买，避免新增商品无法购买。</span></li>
                     <li><span>商城修改价格时自动同步胶囊点数；设置促销价后按促销价计算，取消促销后恢复为当前原价。</span></li>
